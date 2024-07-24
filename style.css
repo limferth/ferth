@@ -72,7 +72,7 @@ nav .nav-links a .selected{
 }
 
 .main .info h1{
-    font-size: 4.8rem;
+    font-size: 4rem;
     margin-bottom: 40px;
     line-height: 8rem;
 }
@@ -82,7 +82,8 @@ nav .nav-links a .selected{
     margin-bottom: 48px;
     line-height: 2.8rem;
 }
-.main .info button{
+.main .info button,
+.content .post-list .post-items .buttons button{
     padding: 10px 30px;
     background-color: #303f9f;
     border: none;
@@ -93,7 +94,8 @@ nav .nav-links a .selected{
     transition: background 0.3s ease;
 }
 
-.main .info button:hover{
+.main .info button:hover,
+.content .post-list .post-items .buttons button:hover{
     background-color: #3e3e3e;
 }
 .main .photo img{
@@ -133,18 +135,21 @@ nav .nav-links a .selected{
 }
 
 
-.recent .posts  .post-items h3{
+.recent .posts  .post-items h3,
+.content .post-list .post-items h3{
     font-size: 2.2rem;
     margin-bottom: 16px;
 }
 
-.recent .posts  .post-items .info{
+.recent .posts  .post-items .info,
+.content .post-list .post-items .info{
     display: flex;
     gap: 10px;
     margin-bottom: 12px;
 }
 
-.recent .posts  .post-items .info h5{
+.recent .posts  .post-items .info h5,
+.content .post-list .post-items .info h5{
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -193,7 +198,8 @@ nav .nav-links a .selected{
 }
 
 .featured .item .details .item-info .year-badge,
-.works-list .item .details .item-info .year-badge{
+.works-list .item .details .item-info .year-badge,
+.content .work-info .year-badge{
     background-color: #303f9f;
     padding: 2px 14px;
     color: #fff;
@@ -210,7 +216,7 @@ nav .nav-links a .selected{
 
 .featured .item .details p,
 .works-list .item .details p{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2.4rem;
     margin-bottom: 20px;
 }
@@ -272,4 +278,345 @@ footer p{
     display: flex;
     flex-direction: column;
     align-items: center;
+} 
+
+/* PAGE SINGLE WORKS */
+
+.content .work-info{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 970px;
+    gap: 20px;
+}
+
+.content .work-info .category{
+    color: #8695a4;
+    font-size: 1.8rem;
+}
+
+.content>p{
+    width: 970px;
+    font-size: 1.6rem;
+    margin: 20px 0;
+}
+
+.content>img{
+    width: 970px;
+    margin: 30px 0;
+    border-radius: 20px;
+}
+.content>h1,
+.content>h2,
+.content>h3{
+    width: 970px;
+}
+
+/* PAGE BLOGS */
+
+.content .post-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content .post-list .post-items{
+    background-color: #dbedf2;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.content .post-list .post-items .buttons{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 12px;
+}
+
+.content .post-list .post-items .buttons button{
+    font-size: 1.4rem;
+    padding: 6px 20px;
+}
+
+.content .post-list .post-items .buttons i{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.content .post-list .post-items .buttons i:hover{
+    color: #303f9f;
+}
+.content .post-list .post-items p{
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+/* page about me */
+
+.content .container{
+    background-color: #dbedf2;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 970px;
+    border-radius: 24px;
+}
+
+.content .container img{
+    width: 300px;
+    border-radius: 20px;
+}
+.content .container h2{
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.content .container .about>p{
+    text-align: justify;
+    font-size: 1.6rem;
+}
+
+.content .container .email{
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.content .container .email a{
+    margin-left: 12px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #000;
+    transition: color 0.3s ease;
+}
+
+.content .container .email a:hover{
+    color: #303f9f;
+    border-bottom: #303f9f;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    nav{
+        padding: 20px 60px;
+    }
+    .main{
+        padding: 0 60px;
+    }
+    .recent{
+        padding: 60px;
+    }
+    .featured,
+    .separator{
+        padding: 40px 60px 0;
+    }
+    .page-title{
+        padding: 80px 84px 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    nav{
+        padding: 20px 40px;
+    }
+    .main{
+        padding: 0 40px;
+    }
+    .main .photo img{
+        width: 380px;
+    }
+    .main .info h1{
+        font-size: 3.6rem;
+    }
+    .recent{
+        padding: 40px;
+    }
+    .featured,
+    .separator{
+        padding: 40px 40px 0;
+    }
+    .page-title{
+        padding: 40px 40px 0;
+    }
+    .content .work-info,
+    .content>p,
+    .content>img,
+    .content>h1,
+    .content>h2,
+    .content>h3,
+    .content .post-list .post-items,
+    .content .container{
+        width: 100%;
+    }
+    .content .container img{
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 994px) {
+    nav{
+        padding: 20px 20px;
+    }
+    .main{
+        padding: 0 20px;
+    }
+    .main .photo img{
+        width: 300px;
+    }
+
+    .main .info h1{
+        font-size: 3rem;
+        line-height: 4.2rem;
+        margin-bottom: 20px;
+    }
+    .main .info p{
+        line-height: 2rem;
+    }
+
+    .recent{
+        padding: 40px 20px;
+    }
+    .recent .posts .post-items h3,
+    .content .post-list .post-items h3{
+        font-size: 2rem;
+    }
+    .recent .posts .post-items p,
+    .content .post-list .post-items .info p{
+        width: 100%;
+    }
+    .featured,
+    .separator{
+        padding: 40px 20px 0;
+    }
+
+    .featured .item,
+    .works-list .item{
+        flex-direction: column;
+        padding: 0 20px 30px
+    }
+    .featured .item img,
+    .works-list .item img{
+        width: 100%;
+        height: 350px;
+    }
+    .featured .item .details h3,
+    .works-list .item .details{
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    .featured .item .details .year-badge,
+    .works-list .item .details .year-badge{
+        font-size: 1.2rem;
+    }
+    .featured .item .details h4,
+    .works-list .item .details .year-badge{
+        font-size: 1.5rem;
+    }
+    .featured .item p,
+    .works-list .item p{
+        font-size: 1.4rem;
+    }
+    .content{
+        padding: 30px 20px 60px;
+    }
+    .content .container h2{
+        font-size: 2rem;
+    }
+    .content .container .about>p{
+        font-size: 1.4rem;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav{
+        justify-content: center;
+        width: 100%;
+    }
+    nav .logo{
+        display: none;
+    }
+    nav .nav-links a{
+        font-size: 1.3rem;
+    }
+
+    .main {
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 40px 0;
+        padding: 0 16px;
+        height: auto;
+        background-color: #fff;
+    }
+    .main .info h1{
+        font-size: 2rem;
+    }
+    .main .info p{
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+    .main .info button{
+        padding: 6px 20px;
+        font-size: 1.2rem;
+    }
+
+    .main .photo img{
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 50px;
+    }
+    .recent .posts{
+        flex-direction: column;
+    }
+    .recent .posts .post-items{
+        width: 100%;
+    }
+    .recent .posts .post-items h3{
+        font-size: 1.6rem;
+    }
+    .recent .posts .post-items p{
+        font-size: 1.3rem;
+    }
+    .featured,
+    .content .works-list .item{
+        padding: 40px 0 0;
+        width: 100%;
+    }
+    .featured .item img,
+    .content .works-list img{
+        width: 100%;
+        height: auto;
+    }
+    .featured .item .details h3,
+    .content .item .details h3{
+        font-size: 2rem;
+    }
+    .featured .item .details p,
+    .content .item .details p{
+        font-size: 1.4rem;
+    }
+    .content .post-list .post-items .buttons button{
+        font-size: 1.2rem;
+        padding: 6px 12px;
+    }
+
+    .content .container{
+        flex-direction: column;
+    }
+
+    .content .container img{
+        width: 100%;
+        height: auto;
+    }
+
+    footer{
+        padding: 40px 16px;
+    }
+    footer p{
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
